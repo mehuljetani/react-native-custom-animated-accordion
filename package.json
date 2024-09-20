@@ -1,6 +1,6 @@
 {
   "name": "react-native-custom-animated-accordion",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "react-native-custom-animated-accordion is a React Native component for creating smooth, animated accordion sections with customizable options.",
   "main": "index.js",
   "scripts": {
