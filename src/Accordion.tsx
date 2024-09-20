@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import {
   View,
   Text,
@@ -8,10 +8,11 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-
 import Animated, {
+  Easing,
   withTiming,
   interpolate,
+  ReduceMotion,
   useSharedValue,
   useAnimatedStyle,
 } from "react-native-reanimated";
@@ -54,19 +55,18 @@ const Accordion = ({
     setIsOpen((prev) => !prev);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     height.value = withTiming(isOpen ? maxHeight : 0, {
-      damping: 5,
-      stiffness: 100,
+      duration: 300,
+      easing: Easing.linear,
+      reduceMotion: ReduceMotion.System,
     });
   }, [isOpen, height, maxHeight]);
 
-  const animatedContainerStyle = useAnimatedStyle(() => {
-    return {
-      height: height.value,
-      overflow: "hidden",
-    };
-  });
+  const animatedContainerStyle = useAnimatedStyle(() => ({
+    height: height.value,
+    overflow: "hidden",
+  }));
 
   const animatedIconStyle = useAnimatedStyle(() => {
     const rotateStartNum = parseFloat(rotateStart) || 0;
@@ -101,18 +101,14 @@ const Accordion = ({
               style={[styles.iconImage, iconStyle]}
               source={isOpen ? iconSourceOpen : iconSourceClosed}
             />
-          ) : (
-            <></>
-          )}
+          ) : null}
         </Animated.View>
       </TouchableOpacity>
       <Animated.View
         style={[
           styles.body,
           animatedContainerStyle,
-          {
-            marginTop: isOpen ? 3 : 0,
-          },
+          { marginTop: isOpen ? 3 : 0 },
           containerStyle,
         ]}
       >
