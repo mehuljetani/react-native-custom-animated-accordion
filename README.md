@@ -7,11 +7,13 @@ A custom React Native component for creating an animated accordion with expandab
 Install the package using either npm or yarn:
 
 ### Using npm:
+
 ```javascript
 npm install react-native-custom-animated-accordion react-native-reanimated
 ```
 
 ### or Using yarn:
+
 ```javascript
 yarn add react-native-custom-animated-accordion react-native-reanimated
 ```
@@ -23,12 +25,10 @@ To implement the `Accordion` component in your React Native project, follow the 
 ### Import the Component
 
 ```javascript
-import Accordion from 'react-native-custom-animated-accordion';
-
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Accordion from 'react-native-custom-animated-accordion';
-import ICONS from './path/to/icons'; // Adjust the path as needed
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import Accordion from "react-native-custom-animated-accordion";
+import ICONS from "./path/to/icons"; // Adjust the path as needed
 
 const App = () => {
   return (
@@ -46,7 +46,7 @@ const App = () => {
         iconViewStyle={styles.customIconView}
         containerStyle={styles.customContainerStyle}
       >
-        <Text style={{ padding: 16, color: '#004d40' }}>
+        <Text style={{ padding: 16, color: "#004d40" }}>
           This is the content of the accordion 3.
         </Text>
       </Accordion>
@@ -58,46 +58,43 @@ const styles = StyleSheet.create({
   container: {
     borderRadius: 8,
     marginVertical: 8,
-    overflow: 'hidden',
-    borderColor: '#ddd',
+    overflow: "hidden",
+    borderColor: "#ddd",
   },
   customBody: {
-    backgroundColor: '#f0f0f0',
+    backgroundColor: "#f0f0f0",
   },
   customImage: {
     width: 20,
     height: 20,
   },
   customTitle: {
-    color: '#333',
+    color: "#333",
     fontSize: 18,
   },
   customHeader: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: "#e0e0e0",
   },
   customIconText: {
     fontSize: 16,
-    color: '#333',
+    color: "#333",
   },
   customIconView: {
     padding: 10,
   },
   customContainerStyle: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: "#ddd",
     borderRadius: 8,
   },
 });
 
 export default App;
-
 ```
 
 ### Example
 
 Here is an example of how to use the `Accordion` component:
-
-
 
  <img src="./src/assets/accord.gif" alt="Demo GIF" width="300" height="auto"/>
 
@@ -107,24 +104,23 @@ Below is a detailed explanation of all the props used in the `Accordion` compone
 
 ## Props
 
-| Prop                | Type             | Default | Description                                         |
-|---------------------|------------------|---------|-----------------------------------------------------|
-| `title`              | `string`         | `""`    | The text to display as the accordion header.       |
-| `maxHeight`         | `number`         | `100`   | Maximum height of the accordion when expanded.     |
-| `rotateEnd`         | `string`         | `'180deg'` | Rotation angle when the accordion is fully opened. |
-| `rotateStart`       | `string`         | `'0deg'` | Rotation angle when the accordion is closed.       |
-| `bodyStyle`         | `ViewStyle`      | `{}`    | Custom styles for the accordion body container.    |
-| `iconStyle`         | `ViewStyle`      | `{}`    | Custom styles for the icon image in the accordion header. |
-| `titleStyle`        | `TextStyle`      | `{}`    | Custom styles for the title text in the accordion header. |
-| `iconSourceOpen`    | `string`         | `null`  | The image source for the icon when the accordion is opened. |
-| `headerStyle`       | `ViewStyle`      | `{}`    | Custom styles for the accordion header.           |
-| `iconSourceClosed`  | `string`         | `null`  | The image source for the icon when the accordion is closed. |
-| `iconViewStyle`     | `ViewStyle`      | `{}`    | Custom styles for the view containing the icon.    |
-| `containerStyle`    | `ViewStyle`      | `{}`    | Custom styles for the accordion container.        |
-| `children`          | `React.ReactNode` | `null` | Content to be rendered inside the accordion when expanded. |
+| Prop               | Type              | Default    | Description                                                 |
+| ------------------ | ----------------- | ---------- | ----------------------------------------------------------- |
+| `title`            | `string`          | `""`       | The text to display as the accordion header.                |
+| `maxHeight`        | `number`          | `100`      | Maximum height of the accordion when expanded.              |
+| `rotateEnd`        | `string`          | `'180deg'` | Rotation angle when the accordion is fully opened.          |
+| `rotateStart`      | `string`          | `'0deg'`   | Rotation angle when the accordion is closed.                |
+| `bodyStyle`        | `ViewStyle`       | `{}`       | Custom styles for the accordion body container.             |
+| `iconStyle`        | `ViewStyle`       | `{}`       | Custom styles for the icon image in the accordion header.   |
+| `titleStyle`       | `TextStyle`       | `{}`       | Custom styles for the title text in the accordion header.   |
+| `iconSourceOpen`   | `string`          | `null`     | The image source for the icon when the accordion is opened. |
+| `headerStyle`      | `ViewStyle`       | `{}`       | Custom styles for the accordion header.                     |
+| `iconSourceClosed` | `string`          | `null`     | The image source for the icon when the accordion is closed. |
+| `iconViewStyle`    | `ViewStyle`       | `{}`       | Custom styles for the view containing the icon.             |
+| `containerStyle`   | `ViewStyle`       | `{}`       | Custom styles for the accordion container.                  |
+| `children`         | `React.ReactNode` | `null`     | Content to be rendered inside the accordion when expanded.  |
 
 ## Usage Example
-
 
 ## License
 
