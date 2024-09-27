@@ -96,7 +96,7 @@ export default App;
 
 Here is an example of how to use the `Accordion` component:
 
- <img src="./src/assets/accord.gif" alt="Demo GIF" width="300" height="auto"/>
+ <img src="https://miro.medium.com/v2/resize:fit:438/format:webp/1*HUF-HMdhht8WRz5gFtnreQ.gif" alt="Demo GIF" />
 
 # Props
 
